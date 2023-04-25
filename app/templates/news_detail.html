@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+  {{ news.title }}
+{% endblock title %}
+{% block content %}
+  <h1>{{ news.title }}</h1>
+  {% if news.category %}
+    <span>Категория: {{ news.category.title }}</span>
+  {% endif %}
+  {% if news.created_date %}
+    <span>Дата создания: {{ news.created_date }}</span>
+  {% endif %}
+  <hr>
+  <p>{{ news.text }}</p>
+{% endblock content %}
